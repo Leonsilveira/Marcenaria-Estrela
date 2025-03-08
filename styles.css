@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background-image: url('Midia_Marcenaria/imagem/blackwhite.png');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+header {
+    background: rgba(7, 7, 7, 0.8);
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #77be32 3px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    max-height: 340px;
+    height: auto;
+    cursor: pointer;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+header a:hover {
+    color: #77be32;
+}
+
+header a:focus {
+    outline: 2px dashed #77be32;
+}
+
+header ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+header li {
+    padding: 0 20px;
+}
+
+.main-content {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.image-panel, .video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.panel-image, .panel-video {
+    width: 100%;
+    height: 150px; /* Altere este valor conforme necessário */
+    border: 2px solid #77c22b;
+    border-radius: 10px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.panel-video {
+    height: 150px; /* Altere este valor conforme necessário */
+}
+
+.contact {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+

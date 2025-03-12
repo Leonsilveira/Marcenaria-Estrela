@@ -16,26 +16,27 @@ body {
 }
 
 header {
-    background: rgba(7, 7, 7, 0.8);
-    color: #fff;
-    padding-top: 30px;
-    min-height: 70px;
-    border-bottom: #77be32 3px solid;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    text-align: center;
+    height: 100vh; /* O header ocupará 100% da altura visível da tela */
+    width: 100vw; /* O header ocupará 100% da largura visível da tela */
+    display: flex; /* Ativando o flexbox para alinhamento */
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    align-items: center; /* Centraliza a imagem verticalmente */
+    background: rgba(7, 7, 7, 0.8); /* Fundo escuro para contraste */
+    margin: 0;
+    padding: 0;
 }
 
 header .logo {
-    max-height: 100px;
-    height: auto;
-    max-width: 100%;
-    margin: 0 auto;
-    display: block;
-    cursor: pointer;
+    position: absolute; /* Garante que a imagem preencha o espaço do header */
+    top: 0;
+    left: 0;
+    width: 100%; /* Faz a imagem ocupar 100% da largura */
+    height: 100%; /* Faz a imagem ocupar 100% da altura */
+    object-fit: cover; /* Ajusta a imagem para cobrir todo o header */
+    margin: 0; /* Remove margens */
 }
+
+
 
 header a {
     color: #fff;
@@ -101,8 +102,17 @@ header li {
 }
 
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
+    @media (max-width: 768px) {
+        header {
+            height: 100vh; /* O header continuará ocupando 100% da altura da tela */
+        }
+        header .logo {
+            width: 100%; /* Mantém a imagem com 100% da largura do header */
+            height: 100%; /* Ocupa 100% da altura do header */
+            object-fit: cover; /* Garante que a imagem preencha todo o espaço sem distorções */
+        }
+    }
+    
     }
     header ul {
         flex-direction: column;

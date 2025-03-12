@@ -21,21 +21,22 @@ header {
     display: flex; /* Ativando o flexbox para alinhamento */
     justify-content: center; /* Centraliza a imagem horizontalmente */
     align-items: center; /* Centraliza a imagem verticalmente */
+    background: rgba(7, 7, 7, 0.8); /* Fundo escuro para contraste */
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Evita que partes extras sejam exibidas */
-    position: relative; /* Garante o controle de posicionamento */
 }
 
 header .logo {
-    position: absolute; /* Faz a imagem preencher o espaço do header */
+    position: absolute; /* Garante que a imagem preencha o espaço do header */
     top: 0;
     left: 0;
     width: 100%; /* Faz a imagem ocupar 100% da largura */
     height: 100%; /* Faz a imagem ocupar 100% da altura */
-    object-fit: cover; /* Garante que a imagem preencha o container proporcionalmente */
-    margin: 0;
+    object-fit: cover; /* Ajusta a imagem para cobrir todo o header */
+    margin: 0; /* Remove margens */
 }
+
+
 
 header a {
     color: #fff;
@@ -58,7 +59,6 @@ header ul {
     list-style: none;
     display: flex;
     gap: 20px;
-    z-index: 10; /* Garante que o menu esteja acima da imagem */
 }
 
 header li {
@@ -103,15 +103,14 @@ header li {
 
 @media (max-width: 768px) {
     header {
-        height: 100vh; /* O header continuará ocupando 100% da altura da tela */
+        height: auto;
     }
     header .logo {
-        width: 100%; /* Mantém a imagem com 100% da largura */
-        height: 100%; /* Faz a imagem cobrir toda a altura proporcionalmente */
-        object-fit: cover; /* Garante que a imagem preencha todo o espaço */
+        width: 100%;
+        height: auto;
     }
     header ul {
-        flex-direction: column; /* Alinha o menu em coluna para telas menores */
+        flex-direction: column;
         gap: 10px;
     }
     .panel-image, .panel-video {

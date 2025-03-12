@@ -112,6 +112,7 @@ function carregarImagens() {
         link.setAttribute('data-lightbox', 'galeria');
         const img = document.createElement('img');
         img.src = `Midia_Marcenaria/imagem/${imagem}`;
+        img.alt = `Imagem da galeria: ${imagem}`;
         img.classList.add('panel-image');
         link.appendChild(img);
         galeria.appendChild(link);
@@ -127,8 +128,9 @@ function carregarVideos() {
         const videoElement = document.createElement('video');
         videoElement.src = `Midia_Marcenaria/videos/${video}`;
         videoElement.controls = true;
-        videoElement.width = 320; // Ajuste a largura conforme necessário
+        videoElement.width = 320;
         videoElement.classList.add('panel-video');
+        videoElement.setAttribute('aria-label', `Vídeo da galeria: ${video}`);
         link.appendChild(videoElement);
         galeriaVideos.appendChild(link);
     });

@@ -15,6 +15,7 @@ function carregarImagens() {
     link.setAttribute('data-lightbox', 'galeria');
     var img = document.createElement('img');
     img.src = "Midia_Marcenaria/imagem/".concat(imagem);
+    img.alt = "Imagem da galeria: ".concat(imagem);
     img.classList.add('panel-image');
     link.appendChild(img);
     galeria.appendChild(link);
@@ -30,9 +31,9 @@ function carregarVideos() {
     var videoElement = document.createElement('video');
     videoElement.src = "Midia_Marcenaria/videos/".concat(video);
     videoElement.controls = true;
-    videoElement.width = 320; // Ajuste a largura conforme necessário
-
+    videoElement.width = 320;
     videoElement.classList.add('panel-video');
+    videoElement.setAttribute('aria-label', "V\xEDdeo da galeria: ".concat(video));
     link.appendChild(videoElement);
     galeriaVideos.appendChild(link);
   });
